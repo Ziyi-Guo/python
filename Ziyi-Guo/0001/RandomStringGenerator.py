@@ -14,11 +14,11 @@ class RandomStringGenerator():
 		len_ch = len(ch_list)
 		for i in range(self.vol):
 			tmp_index = random.sample(range(1,len_ch),self.string_len)
-			self.list.append(''.join([ch_list[j] for j in tmp_index])+'\n')
+			self.list.append(''.join([ch_list[j] for j in tmp_index]))
 
 
-rsg = RandomStringGenerator()
-rsg.generate_strings()
-f = open('strings.txt','w')
-f.writelines(rsg.list)
-f.close
+# rsg = RandomStringGenerator()
+# rsg.generate_strings()
+# f = open('strings.txt','w')
+# f.writelines([s+'\n' for s in rsg.list)
+# f.close
