@@ -1,0 +1,17 @@
+redis 
+set key value (set myage 22)
+incr key (incr myage will turn myage into 23)
+# using incr instead of 'x = get key; x = x + 1; set key x', as incr is atomic 
+expire key value (expire myage 120)
+ttl key
+# set and get the time of expiration, if not set, never expires.
+# return value -2 means don't exist, -1 means never expires
+lpush list sth + rpush list sth
+lrange list start_index end_index
+llen list 
+lpop list + rpop list
+# action for list
+sadd setname 'sth' + srem setname 'sth' + sismember namelist 'sth' (return 1 for yes and 0 for no)
+smembers setname (show all the members) + sunion setname1 setname2 (add two sets together)
+# actions for set, and sorted set with zadd 
+hset obj_name attr value [ recursive with attr value ] (hash set for an object) + hgetall obj_name
